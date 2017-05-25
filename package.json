@@ -1,0 +1,26 @@
+{
+  "name": "mu-jquery-spy",
+  "version": "0.0.1",
+  "description": "jQuery plugin for spying on dom elements",
+  "main": "",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mu-lib/mu-jquery-spy.git"
+  },
+  "author": "Mikael Karon <mikael@karon.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mu-lib/mu-jquery-spy/issues"
+  },
+  "homepage": "https://github.com/mu-lib/mu-jquery-spy#readme",
+  "dependencies": {},
+  "peerDependencies": {
+    "jquery": "^3.0.0"
+  },
+  "devDependencies": {
+    "standard-version": "^4.0.0"
+  }
+}

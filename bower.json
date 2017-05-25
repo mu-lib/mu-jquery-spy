@@ -1,0 +1,20 @@
+{
+  "name": "mu-jquery-spy",
+  "authors": [
+    "Mikael Karon <mikael@karon.se>"
+  ],
+  "description": "jQuery plugin for spying on dom elements",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0"
+  }
+}
