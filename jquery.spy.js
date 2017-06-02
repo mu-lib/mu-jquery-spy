@@ -10,12 +10,14 @@
   return function (selector, callback, type) {
     var me = this;
     var $ = me.constructor;
+    var cache = {};
 
     return me
       .find(selector)
       .map(function (i, spy) {
+        var targets = callback.call(me, spy);
+        var $spies = cache[targets] || (cache[targets] = me.find(targets));
         var $spy = $(spy);
-        var $spies = me.find(callback.call(me, spy));
 
         return $spies.length === 0
           ? $spy.triggerHandler(type)
