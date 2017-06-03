@@ -1,6 +1,6 @@
 {
   "name": "mu-jquery-spy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "jQuery plugin for spying on dom elements",
   "main": "",
   "scripts": {
