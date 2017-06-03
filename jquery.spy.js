@@ -14,16 +14,25 @@
 
     return me
       .find(selector)
-      .map(function (i, spy) {
-        var targets = callback.call(me, spy);
-        var $spies = cache[targets] || (cache[targets] = me.find(targets));
-        var $spy = $(spy);
+      .map(function (index, spy) {
+        var spies = callback.call(me, spy);
 
-        return $spies.length === 0
-          ? $spy.triggerHandler(type)
-          : $spies
+        return spies
+          ? {
+            spy: $(spy),
+            spies: cache[spies] || (cache[spies] = $(spies))
+          }
+          : undefined;
+      })
+      .map(function (index, op) {
+        var spy = op.spy;
+        var spies = op.spies;
+
+        return spies.length === 0
+          ? spy.triggerHandler(type)
+          : spies
             .map(function (j, target) {
-              return $spy.triggerHandler(type, target);
+              return spy.triggerHandler(type, target);
             })
             .get();
       });
