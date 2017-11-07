@@ -30,11 +30,9 @@
 
         return spies.length === 0
           ? spy.triggerHandler(type)
-          : spies
-            .map(function (j, target) {
-              return spy.triggerHandler(type, target);
-            })
-            .get();
+          : $.map(spies, function (target) {
+            return spy.triggerHandler(type, target);
+          });
       });
   }
 });
