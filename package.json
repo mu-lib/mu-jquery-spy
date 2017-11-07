@@ -21,6 +21,6 @@
     "jquery": "^3.0.0"
   },
   "devDependencies": {
-    "standard-version": "^4.0.0"
+    "standard-version": "^4.2.0"
   }
 }
